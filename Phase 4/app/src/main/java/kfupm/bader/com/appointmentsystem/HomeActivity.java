@@ -2,8 +2,13 @@ package kfupm.bader.com.appointmentsystem;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.support.annotation.NonNull;
+import android.support.design.widget.NavigationView;
+import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
@@ -16,12 +21,20 @@ public class HomeActivity extends AppCompatActivity {
     TextView welcomeMessage;
     SharedPreferences pref;
     SharedPreferences.Editor editor;
+
+
+    private DrawerLayout dl;
+    private NavigationView nv;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+
+
         loginBTN = findViewById(R.id.homeActivity_loginBTN);
-        logutBTN= findViewById(R.id.homeActivity_logoutBTN);
+        logutBTN = findViewById(R.id.homeActivity_logoutBTN);
         welcomeMessage = findViewById(R.id.homeActivity_loginWelcomeMessage);
 
         pref = getApplicationContext().getSharedPreferences("MyPref", 0); // 0 - for private mode
@@ -37,7 +50,7 @@ public class HomeActivity extends AppCompatActivity {
         logutBTN.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                editor.putBoolean("loggedin", false); // Storing boolean - true/false
+                editor.putBoolean("loggedin", false);
                 editor.apply(); // commit changes
                 welcomeMessage.setVisibility(View.GONE);
                 loginBTN.setVisibility(View.VISIBLE);
@@ -47,28 +60,64 @@ public class HomeActivity extends AppCompatActivity {
 
 
 
+        dl = (DrawerLayout)findViewById(R.id.activity_home);
+        nv = (NavigationView)findViewById(R.id.nv);
 
 
+        nv.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                int id = item.getItemId();
+                switch (id) {
+                    case R.id.account:
+                        Toast.makeText(HomeActivity.this, "My Account", Toast.LENGTH_SHORT).show();
+                    case R.id.settings:
+                        Toast.makeText(HomeActivity.this, "Settings", Toast.LENGTH_SHORT).show();
+                    case R.id.mycart:
+                        Toast.makeText(HomeActivity.this, "My Cart", Toast.LENGTH_SHORT).show();
+                    default:
+                        return true;
+                }
 
 
+            }
+        });
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     @Override
     protected void onResume() {
         super.onResume();
+
         // Check if he is signed up or not
-        Intent i = getIntent();
-        Bundle bd = i.getExtras();
-        int user_id = -1;
-        String user_name = null;
-        if(bd != null) {
-            user_id = Integer.valueOf((String) bd.get("id"));
-            user_name = (String) bd.get("name");
-        }
+        String user_ID = null;
+        String fname = null;
+        String lname = null;
+        String type_ID = null;
 
-
+        user_ID = (String) pref.getString("user_ID",null);
+        fname = (String) pref.getString("fname",null);
+        lname = (String) pref.getString("lname",null);
+        type_ID = (String) pref.getString("type_ID",null);
+        Log.d("Hello,," , type_ID+"");
         if(pref.getBoolean("loggedin", false)){
-            welcomeMessage.setText("Welcome "+ user_name + "  ! ");
+            welcomeMessage.setText("Welcome " + lname + "  ! ");
             welcomeMessage.setVisibility(View.VISIBLE);
             loginBTN.setVisibility(View.GONE);
             logutBTN.setVisibility(View.VISIBLE);
@@ -77,5 +126,26 @@ public class HomeActivity extends AppCompatActivity {
             loginBTN.setVisibility(View.VISIBLE);
             logutBTN.setVisibility(View.GONE);
         }
+        View headerView = nv.getHeaderView(0);
+        TextView navigationNameET = (TextView)headerView.findViewById(R.id.navHeader_name);
+        navigationNameET.setText(fname + " " + lname);
+        TextView navigationUserTypeET = (TextView)headerView.findViewById(R.id.navHeader_userType);
+        if (type_ID != null) {
+            switch (type_ID){
+                case "1":
+                    navigationUserTypeET.setText("Administrator");
+                    break;
+                case "2":
+                    navigationUserTypeET.setText("Manager");
+                    break;
+                case "3":
+                    navigationUserTypeET.setText("Receptionist");
+                    break;
+                case "4":
+                    navigationUserTypeET.setText("Patient");
+                    break;
+            }
+        }
+
     }
 }

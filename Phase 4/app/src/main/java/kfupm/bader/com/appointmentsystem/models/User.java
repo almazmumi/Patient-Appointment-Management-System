@@ -1,47 +1,53 @@
 package kfupm.bader.com.appointmentsystem.models;
 
+import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 public class User {
 
-    @SerializedName("id")
-    private int id;
-
-    @SerializedName("fname")
-    private String fname;
-
-    @SerializedName("lname")
-    private String lname;
-
+    @SerializedName("user_ID")
+    @Expose
+    private String userID;
     @SerializedName("username")
+    @Expose
     private String username;
-
+    @SerializedName("fname")
+    @Expose
+    private String fname;
+    @SerializedName("lname")
+    @Expose
+    private String lname;
     @SerializedName("hashed_pw")
-    private String hashed_pw;
-
+    @Expose
+    private String hashedPw;
     @SerializedName("email")
+    @Expose
     private String email;
-
     @SerializedName("reg_date")
-    private String reg_date;
+    @Expose
+    private String regDate;
+    @SerializedName("type_ID")
+    @Expose
+    private String typeID;
 
-    @SerializedName("type_id")
-    private String type_id;
+    @SerializedName("gender")
+    @Expose
+    private String gender;
 
-    public String getType_id() {
-        return type_id;
+    public String getUserID() {
+        return userID;
     }
 
-    public void setType_id(String type_id) {
-        this.type_id = type_id;
+    public void setUserID(String userID) {
+        this.userID = userID;
     }
 
-    public int getId() {
-        return id;
+    public String getUsername() {
+        return username;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public String getFname() {
@@ -60,20 +66,12 @@ public class User {
         this.lname = lname;
     }
 
-    public String getUsername() {
-        return username;
+    public String getHashedPw() {
+        return hashedPw;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
-    }
-
-    public String getHashed_pw() {
-        return hashed_pw;
-    }
-
-    public void setHashed_pw(String hashed_pw) {
-        this.hashed_pw = hashed_pw;
+    public void setHashedPw(String hashedPw) {
+        this.hashedPw = hashedPw;
     }
 
     public String getEmail() {
@@ -84,11 +82,29 @@ public class User {
         this.email = email;
     }
 
-    public String getReg_date() {
-        return reg_date;
+    public String getRegDate() {
+        return regDate;
     }
 
-    public void setReg_date(String reg_date) {
-        this.reg_date = reg_date;
+    public void setRegDate(String regDate) {
+        this.regDate = regDate;
     }
+
+    public String getTypeID() {
+        return typeID;
+    }
+
+    public void setTypeID(String typeID) {
+        this.typeID = typeID;
+    }
+
+
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+
 }

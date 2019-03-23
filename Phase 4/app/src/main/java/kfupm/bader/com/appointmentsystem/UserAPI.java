@@ -3,32 +3,31 @@ package kfupm.bader.com.appointmentsystem;
 import java.util.List;
 
 import kfupm.bader.com.appointmentsystem.models.User;
+import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.POST;
 
-/**
- * Created by haerul on 15/03/18.
- */
-
-public interface ApiInterface {
-
-    @POST("get_pets.php")
-    Call<List<User>> getUsers();
+public interface UserAPI {
+    @FormUrlEncoded
+    @POST("login.php")
+    Call<ResponseBody> authenticateUser(
+            @Field("username") String username,
+            @Field("password") String password
+    );
 
     @FormUrlEncoded
-    @POST("signup.php")
-    Call<User> insertUser(
-            @Field("key") String key,
-            @Field("id") int id,
+    @POST("register.php")
+    Call<ResponseBody> insertUser(
             @Field("fname") String fname,
             @Field("lname") String lname,
             @Field("username") String username,
             @Field("hashed_pw") String hashed_pw,
             @Field("email") String email,
             @Field("reg_date") String reg_date,
-            @Field("type_id") int type_id);
+            @Field("type_ID") String type_id,
+            @Field("gender") String gender);
 
 
 
