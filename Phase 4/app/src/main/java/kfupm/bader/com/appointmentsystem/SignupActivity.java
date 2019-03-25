@@ -70,7 +70,6 @@ public class SignupActivity extends AppCompatActivity {
 
 
         TextView type_idTV = findViewById(R.id.signupActivity_typeID);
-        ImageButton backBTN = findViewById(R.id.signupActivity_backBTN);
         final TextView test = findViewById(R.id.textView4);
 
         // to get register date (Current Date)
@@ -125,6 +124,7 @@ public class SignupActivity extends AppCompatActivity {
         // END OF ADD SECOND PHONE NUMBER BUTTON ---------------------------------------------------------------------
 
         // START OF BACK BUTTON ---------------------------------------------------------------------
+        ImageButton backBTN = findViewById(R.id.signupActivity_backBTN);
         backBTN.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

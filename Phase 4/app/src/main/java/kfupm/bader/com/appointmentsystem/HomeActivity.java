@@ -21,6 +21,8 @@ public class HomeActivity extends AppCompatActivity {
     TextView welcomeMessage;
     SharedPreferences pref;
     SharedPreferences.Editor editor;
+    TextView navigationNameET;
+    TextView navigationUserTypeET;
 
 
     private DrawerLayout dl;
@@ -36,6 +38,7 @@ public class HomeActivity extends AppCompatActivity {
         loginBTN = findViewById(R.id.homeActivity_loginBTN);
         logutBTN = findViewById(R.id.homeActivity_logoutBTN);
         welcomeMessage = findViewById(R.id.homeActivity_loginWelcomeMessage);
+
 
         pref = getApplicationContext().getSharedPreferences("MyPref", 0); // 0 - for private mode
         editor = pref.edit();
@@ -55,6 +58,9 @@ public class HomeActivity extends AppCompatActivity {
                 welcomeMessage.setVisibility(View.GONE);
                 loginBTN.setVisibility(View.VISIBLE);
                 logutBTN.setVisibility(View.GONE);
+                navigationNameET.setText("Welcome our guest :)");
+                navigationUserTypeET.setText("Register or smothing else will happen @_@");
+
             }
         });
 
@@ -62,7 +68,9 @@ public class HomeActivity extends AppCompatActivity {
 
         dl = (DrawerLayout)findViewById(R.id.activity_home);
         nv = (NavigationView)findViewById(R.id.nv);
-
+        View headerView = nv.getHeaderView(0);
+        navigationNameET = (TextView)headerView.findViewById(R.id.navHeader_name);
+        navigationUserTypeET = (TextView)headerView.findViewById(R.id.navHeader_userType);
 
         nv.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
@@ -115,7 +123,9 @@ public class HomeActivity extends AppCompatActivity {
         fname = (String) pref.getString("fname",null);
         lname = (String) pref.getString("lname",null);
         type_ID = (String) pref.getString("type_ID",null);
-        Log.d("Hello,," , type_ID+"");
+        Log.d("hi,," , type_ID.trim()+"");
+
+
         if(pref.getBoolean("loggedin", false)){
             welcomeMessage.setText("Welcome " + lname + "  ! ");
             welcomeMessage.setVisibility(View.VISIBLE);
@@ -126,12 +136,12 @@ public class HomeActivity extends AppCompatActivity {
             loginBTN.setVisibility(View.VISIBLE);
             logutBTN.setVisibility(View.GONE);
         }
-        View headerView = nv.getHeaderView(0);
-        TextView navigationNameET = (TextView)headerView.findViewById(R.id.navHeader_name);
+
+
         navigationNameET.setText(fname + " " + lname);
-        TextView navigationUserTypeET = (TextView)headerView.findViewById(R.id.navHeader_userType);
+
         if (type_ID != null) {
-            switch (type_ID){
+            switch (type_ID.trim()){
                 case "1":
                     navigationUserTypeET.setText("Administrator");
                     break;

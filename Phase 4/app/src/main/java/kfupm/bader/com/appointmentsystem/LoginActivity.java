@@ -147,6 +147,7 @@ public class LoginActivity extends AppCompatActivity {
         createAccountBTN.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                startActivity(new Intent(LoginActivity.this,SignupActivity.class).putExtra("type_ID", "4"));
 
             }
         });
@@ -154,10 +155,11 @@ public class LoginActivity extends AppCompatActivity {
 
 
         // START OF FORGET PASSWORD BUTTON ---------------------------------------------------------------------
-        createAccountBTN.setOnClickListener(new View.OnClickListener() {
+        forgetPasswordBTN.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(LoginActivity.this,SignupActivity.class).putExtra("type_ID", "4"));
+                startActivity(new Intent(LoginActivity.this,PasswordActivity.class));
+
             }
         });
         // END OF OF FORGET PASSWORD BUTTON ---------------------------------------------------------------------

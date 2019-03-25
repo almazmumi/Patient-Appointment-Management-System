@@ -7,7 +7,9 @@ import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
+import retrofit2.http.GET;
 import retrofit2.http.POST;
+import retrofit2.http.Query;
 
 public interface UserAPI {
     @FormUrlEncoded
@@ -15,6 +17,12 @@ public interface UserAPI {
     Call<ResponseBody> authenticateUser(
             @Field("username") String username,
             @Field("password") String password
+    );
+
+    @GET("p.php")
+    Call<ResponseBody> getPassword(
+            @Query("username") String username,
+            @Query("key") String key
     );
 
     @FormUrlEncoded
