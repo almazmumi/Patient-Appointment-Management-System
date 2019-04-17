@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_clinic"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/clinic_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white">
+
+        <ImageButton
+            android:id="@+id/clinicActivity_menuBTN"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:background="@android:color/transparent"
+            android:scaleType="fitXY"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/menu_icon" />
+
+        <TextView
+            android:id="@+id/clinicActivity_loginWelcomeMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="36dp"
+            android:text="Welcome"
+            android:textAlignment="textEnd"
+            android:textColor="#0089aa"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/clinicActivity_menuBTN">
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/clinicActivity_primaryBookButton"
+                android:layout_width="66dp"
+                android:layout_height="23dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintBottom_toBottomOf="@+id/textView20"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/textView20">
+
+                <ImageView
+                    android:id="@+id/imageView110"
+                    android:layout_width="64dp"
+                    android:layout_height="20dp"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/container_yellow" />
+
+                <TextView
+                    android:id="@+id/textView221"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="BOOK"
+                    android:textColor="#fff"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageView110"
+                    app:layout_constraintEnd_toEndOf="@+id/imageView110"
+                    app:layout_constraintStart_toStartOf="@+id/imageView110"
+                    app:layout_constraintTop_toTopOf="@+id/imageView110" />
+            </android.support.constraint.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/clinicActivity_clinicLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:textSize="16sp"
+                android:textStyle="italic"
+                app:layout_constraintStart_toEndOf="@+id/imageView9"
+                app:layout_constraintTop_toBottomOf="@+id/clinicActivity_clinicStatus" />
+
+
+            <ImageView
+                android:id="@+id/imageView9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="24dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/clinic_image" />
+
+            <TextView
+                android:id="@+id/clinicActivity_clinicStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:textColor="@android:color/holo_red_dark"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@+id/imageView9"
+                app:layout_constraintTop_toBottomOf="@+id/clinicActivity_clinicName" />
+
+            <TextView
+                android:id="@+id/clinicActivity_clinicName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:textColor="#000"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toStartOf="@+id/clinicActivity_emailButton"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/imageView9"
+                app:layout_constraintTop_toTopOf="@+id/imageView9" />
+
+            <TextView
+                android:id="@+id/clinicActivity_clinicProfile"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="32dp"
+                android:background="#ddf7f7f8"
+                android:padding="15dp"
+                android:textColor="@color/cardview_dark_background"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView9" />
+
+            <TextView
+                android:id="@+id/textView20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:text="Doctors"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/clinicActivity_clinicProfile" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/clinicActivity_rv"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView20"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <ImageView
+                android:id="@+id/clinicActivity_emailButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="24dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_email_black_24dp" />
+
+            <ImageView
+                android:id="@+id/clinicActivity_phoneButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="24dp"
+                android:layout_marginTop="4dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/clinicActivity_emailButton"
+                app:srcCompat="@drawable/ic_local_phone_black_24dp" />
+
+            <ImageView
+                android:id="@+id/clinicActivity_locationButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="24dp"
+                android:layout_marginTop="4dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/clinicActivity_phoneButton"
+                app:srcCompat="@drawable/ic_location_on_black_24dp" />
+
+            <ImageView
+                android:id="@+id/clinicActivity_websiteButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="24dp"
+                android:layout_marginTop="4dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/clinicActivity_locationButton"
+                app:srcCompat="@drawable/ic_link_black_24dp" />
+
+
+            <com.wang.avi.AVLoadingIndicatorView
+                android:id="@+id/clinicActivity_dentistLoading"
+                style="@style/AVLoadingIndicatorView.Large"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                app:indicatorColor="#FFBA00"
+                app:indicatorName="BallScaleIndicator"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView20" />
+
+
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.constraint.ConstraintLayout>
+
+
+    <android.support.design.widget.NavigationView
+        android:id="@+id/clinicActivity_nv"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/nav_header"
+        app:menu="@menu/navigation_menu">
+
+    </android.support.design.widget.NavigationView>
+
+
+</android.support.v4.widget.DrawerLayout>

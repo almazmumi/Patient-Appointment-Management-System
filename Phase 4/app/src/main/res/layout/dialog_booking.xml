@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/textInputLayout3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bookingDialog_doctors">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/bookingDialog_notes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Notes"
+            android:singleLine="false" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/textInputLayout4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout3">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/bookingDialog_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:editable="false"
+            android:hint="Date ( YYYY-MM-DD )"
+            android:inputType="none"
+            android:singleLine="true" />
+    </android.support.design.widget.TextInputLayout>
+
+    <RadioGroup
+        android:id="@+id/bookingDialog_doctorsGroup"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        android:checkedButton="@+id/bookingDialog_anyDoctor"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RadioButton
+            android:id="@+id/bookingDialog_anyDoctor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Any Doctoor" />
+
+        <RadioButton
+            android:id="@+id/bookingDialog_specificDoctor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Specific Doctor" />
+    </RadioGroup>
+
+    <Spinner
+        android:id="@+id/bookingDialog_doctors"
+        android:layout_width="0dp"
+        android:layout_height="31dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bookingDialog_doctorsGroup" />
+
+</android.support.constraint.ConstraintLayout>

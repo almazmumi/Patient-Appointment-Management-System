@@ -21,7 +21,13 @@
         <activity android:name=".LoginActivity" />
         <activity android:name=".SignupActivity" />
         <activity android:name=".PasswordActivity" />
-        <activity android:name=".AddClinicActivity"></activity>
+        <activity android:name=".AddClinicActivity" />
+        <activity android:name=".AppointmentsActivity" />
+        <activity android:name=".ClinicsActivity" />
+        <activity android:name=".AppointmentActivity" />
+        <activity android:name=".DentistActivity" />
+        <activity android:name=".ClinicActivity" />
+        <activity android:name=".AddNewActivity"></activity>
     </application>
 
 </manifest>

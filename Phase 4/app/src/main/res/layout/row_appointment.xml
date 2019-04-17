@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/appointmentRow_parentLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#fff"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:paddingBottom="20dp"
+    tools:layout_editor_absoluteY="25dp">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/appointmentRow_detailsBox"
+        android:layout_width="0dp"
+        android:layout_height="99dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="144dp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/appointmentRow_detailsBoxBackground"
+            android:layout_width="0dp"
+            android:layout_height="99dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/appointment_card_expand" />
+
+        <TextView
+            android:id="@+id/textView14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="32dp"
+            android:text="Clinic Name:"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/appointmentRow_detailsBoxBackground" />
+
+        <TextView
+            android:id="@+id/appointmentRow_clinicName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="+966126120029"
+            app:layout_constraintBottom_toBottomOf="@+id/textView14"
+            app:layout_constraintStart_toEndOf="@+id/textView14"
+            app:layout_constraintTop_toTopOf="@+id/textView14" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="8dp"
+            android:text="Email:"
+            android:textSize="15sp"
+            app:layout_constraintTop_toBottomOf="@+id/textView14"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteX="10dp" />
+
+        <TextView
+            android:id="@+id/appointmentRow_Email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="jdawe02@gmail.com"
+            app:layout_constraintBottom_toBottomOf="@+id/textView7"
+            app:layout_constraintStart_toEndOf="@+id/textView7"
+            app:layout_constraintTop_toTopOf="@+id/textView7" />
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/appointmentRow_detailsBoxAddButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/appointmentRow_detailsBoxBackground"
+            app:layout_constraintEnd_toStartOf="@+id/appointmentRow_detailsBoxDetailsButton"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintStart_toEndOf="@+id/appointmentRow_detailsBoxBackground"
+            app:layout_constraintTop_toBottomOf="@+id/appointmentRow_detailsBoxBackground">
+
+            <ImageView
+                android:id="@+id/appointmentRow_buttonContainer1"
+                android:layout_width="60dp"
+                android:layout_height="19dp"
+                app:layout_constraintBottom_toTopOf="@+id/appointmentRow_detailsBoxAddButtonText"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/container_yellow" />
+
+            <TextView
+                android:id="@+id/appointmentRow_detailsBoxAddButtonText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ADD"
+                android:textColor="#FFF"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/appointmentRow_buttonContainer1"
+                app:layout_constraintEnd_toEndOf="@+id/appointmentRow_buttonContainer1"
+                app:layout_constraintStart_toStartOf="@+id/appointmentRow_buttonContainer1"
+                app:layout_constraintTop_toTopOf="@+id/appointmentRow_buttonContainer1" />
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/appointmentRow_detailsBoxDetailsButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/appointmentRow_detailsBoxBackground"
+            app:layout_constraintEnd_toStartOf="@+id/appointmentRow_detailsBoxBackground"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/appointmentRow_detailsBoxAddButton"
+            app:layout_constraintTop_toBottomOf="@+id/appointmentRow_detailsBoxBackground">
+
+            <ImageView
+                android:id="@+id/appointmentRow_buttonContainer2"
+                android:layout_width="60dp"
+                android:layout_height="19dp"
+                app:layout_constraintBottom_toTopOf="@+id/appointmentRow_detailsBoxDetailsButtonText"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/container_yellow" />
+
+            <TextView
+                android:id="@+id/appointmentRow_detailsBoxDetailsButtonText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="DETAILS"
+                android:textColor="#FFF"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/appointmentRow_buttonContainer2"
+                app:layout_constraintEnd_toEndOf="@+id/appointmentRow_buttonContainer2"
+                app:layout_constraintStart_toStartOf="@+id/appointmentRow_buttonContainer2"
+                app:layout_constraintTop_toTopOf="@+id/appointmentRow_buttonContainer2" />
+
+        </android.support.constraint.ConstraintLayout>
+
+        <ImageView
+            android:id="@+id/apointmentRow_googleMap"
+            android:layout_width="44dp"
+            android:layout_height="45dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/appointmentRow_Email"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/appointmentRow_clinicName"
+            app:srcCompat="@drawable/ic_location_on_black_24dp" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="0dp"
+        android:layout_height="147dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/appointment_card" />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/appointmentRow_primaryDetailsButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView6">
+
+        <ImageView
+            android:id="@+id/imageView10"
+            android:layout_width="67dp"
+            android:layout_height="20dp"
+            android:visibility="visible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/container_yellow" />
+
+        <TextView
+            android:id="@+id/textView21"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DETAILS"
+            android:textColor="#fff"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView10"
+            app:layout_constraintEnd_toEndOf="@+id/imageView10"
+            app:layout_constraintStart_toStartOf="@+id/imageView10"
+            app:layout_constraintTop_toTopOf="@+id/imageView10" />
+    </android.support.constraint.ConstraintLayout>
+
+
+    <TextView
+        android:id="@+id/clinicRow_clinicName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:text="Bader Almazmumi"
+        android:textColor="#000"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/imageView6"
+        app:layout_constraintTop_toTopOf="@+id/imageView6" />
+
+    <TextView
+        android:id="@+id/clinicRow_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Pending"
+        android:textColor="@android:color/holo_red_dark"
+        app:layout_constraintStart_toStartOf="@+id/clinicRow_clinicName"
+        app:layout_constraintTop_toBottomOf="@+id/clinicRow_clinicName" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toEndOf="@+id/appointmentRow_date"
+        app:layout_constraintTop_toBottomOf="@+id/clinicRow_status"
+        app:srcCompat="@drawable/ic_info_black_24dp" />
+
+    <ImageView
+        android:id="@+id/clinicRow_phoneButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="@+id/imageView6"
+        app:layout_constraintTop_toBottomOf="@+id/clinicRow_status"
+        app:srcCompat="@drawable/ic_insert_invitation_black_24dp" />
+
+    <TextView
+        android:id="@+id/appointmentRow_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="2013-12-22"
+        app:layout_constraintBottom_toBottomOf="@+id/clinicRow_phoneButton"
+        app:layout_constraintStart_toEndOf="@+id/clinicRow_phoneButton"
+        app:layout_constraintTop_toTopOf="@+id/clinicRow_phoneButton" />
+
+    <TextView
+        android:id="@+id/appointmentRow_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="Office # 22"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView8"
+        app:layout_constraintStart_toEndOf="@+id/imageView8"
+        app:layout_constraintTop_toTopOf="@+id/imageView8" />
+
+    <TextView
+        android:id="@+id/appointmentRow_daysLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
+        android:text="2"
+        android:textAlignment="viewEnd"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toEndOf="@+id/imageView6"
+        app:layout_constraintTop_toTopOf="@+id/imageView6" />
+
+    <TextView
+        android:id="@+id/appointmentRow_appointmentDaysLeftTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="days"
+        app:layout_constraintEnd_toEndOf="@+id/appointmentRow_daysLeft"
+        app:layout_constraintTop_toTopOf="@+id/appointmentRow_daysLeft" />
+
+</android.support.constraint.ConstraintLayout>

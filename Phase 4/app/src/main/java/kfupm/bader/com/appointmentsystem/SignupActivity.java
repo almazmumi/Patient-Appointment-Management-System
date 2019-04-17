@@ -173,7 +173,7 @@ public class SignupActivity extends AppCompatActivity {
                     // Backend Stuff
                     Retrofit retrofit = new Retrofit.Builder().baseUrl("https://pamsapp123.herokuapp.com/").addConverterFactory(GsonConverterFactory.create()).build();
                     UserAPI userAPI = retrofit.create(UserAPI.class);
-                    Call<ResponseBody> call = userAPI.insertUser(fname,lname,username,hashed_pw,email,reg_date,type_ID,gender);
+                    Call<ResponseBody> call = userAPI.insertUser(fname,lname,username,hashed_pw,email,gender);
                     call.enqueue(new Callback<ResponseBody>() {
 
                         @Override

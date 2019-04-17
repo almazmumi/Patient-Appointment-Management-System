@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/clinicRow_parentLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#fff"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:paddingBottom="20dp"
+    tools:layout_editor_absoluteY="25dp">
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/clinicRow_primaryDetailsButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/clinicRow_locationTV">
+
+        <ImageView
+            android:id="@+id/imageView10"
+            android:layout_width="67dp"
+            android:layout_height="20dp"
+            android:visibility="visible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/container_yellow" />
+
+        <TextView
+            android:id="@+id/textView21"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DETAILS"
+            android:textColor="#fff"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView10"
+            app:layout_constraintEnd_toEndOf="@+id/imageView10"
+            app:layout_constraintStart_toStartOf="@+id/imageView10"
+            app:layout_constraintTop_toTopOf="@+id/imageView10" />
+    </android.support.constraint.ConstraintLayout>
+
+
+    <TextView
+        android:id="@+id/clinicRow_clinicName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Golden Dntal Clinic"
+        android:textColor="#000"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/imageView11"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/dentistRow_profilePic"
+        app:layout_constraintTop_toTopOf="@+id/dentistRow_profilePic" />
+
+    <TextView
+        android:id="@+id/clinicRow_locationTV"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Jeddah"
+        android:textSize="14sp"
+        android:textStyle="italic"
+        app:layout_constraintStart_toEndOf="@+id/dentistRow_profilePic"
+        app:layout_constraintTop_toBottomOf="@+id/clinicRow_status" />
+
+    <TextView
+        android:id="@+id/clinicRow_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="Pending"
+        android:textColor="@android:color/holo_red_dark"
+        app:layout_constraintStart_toEndOf="@+id/dentistRow_profilePic"
+        app:layout_constraintTop_toBottomOf="@+id/clinicRow_clinicName" />
+
+    <ImageView
+        android:id="@+id/clinicRow_phoneButton"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginBottom="4dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:srcCompat="@drawable/ic_local_phone_black_24dp" />
+
+    <ImageView
+        android:id="@+id/clinicRow_locationButton"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginBottom="4dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView11"
+        app:layout_constraintStart_toStartOf="@+id/imageView11"
+        app:srcCompat="@drawable/ic_location_on_black_24dp" />
+
+    <ImageView
+        android:id="@+id/clinicRow_websiteButton"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginBottom="4dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView5"
+        app:layout_constraintEnd_toStartOf="@+id/clinicRow_phoneButton"
+        app:layout_constraintStart_toEndOf="@+id/clinicRow_locationButton"
+        app:srcCompat="@drawable/ic_link_blackk_24dp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_marginTop="60dp"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="@+id/imageView6"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_star_half_black_24dp" />
+
+    <ImageView
+        android:id="@+id/imageView12"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintEnd_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="@+id/imageView"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/ic_star_black_24dp" />
+
+    <ImageView
+        android:id="@+id/imageView11"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+        app:layout_constraintEnd_toStartOf="@+id/imageView4"
+        app:layout_constraintTop_toTopOf="@+id/imageView4"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/ic_star_black_24dp" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView12"
+        app:layout_constraintEnd_toStartOf="@+id/imageView12"
+        app:layout_constraintTop_toTopOf="@+id/imageView12"
+        app:srcCompat="@drawable/ic_star_black_24dp" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView5"
+        app:layout_constraintEnd_toStartOf="@+id/imageView5"
+        app:layout_constraintTop_toTopOf="@+id/imageView5"
+        app:srcCompat="@drawable/ic_star_black_24dp" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="4.3 / 5"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintStart_toStartOf="@+id/imageView11"
+        app:layout_constraintTop_toBottomOf="@+id/imageView5" />
+
+    <ImageView
+        android:id="@+id/dentistRow_profilePic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="@+id/imageView6"
+        app:layout_constraintTop_toTopOf="@+id/imageView6"
+        app:srcCompat="@drawable/clinic_image" />
+
+</android.support.constraint.ConstraintLayout>
