@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>AdminPanel1</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alegreya+Sans">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Antic">
+    <link rel="stylesheet" href="assets/css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="assets/css/Login-Form-Clean.css">
+    <link rel="stylesheet" href="assets/css/Navigation-Clean.css">
+    <link rel="stylesheet" href="assets/css/Registration-Form-with-Photo.css">
+    <link rel="stylesheet" href="assets/css/Sidebar-Menu-1.css">
+    <link rel="stylesheet" href="assets/css/Sidebar-Menu.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/Table-with-search.css">
+    <link rel="stylesheet" href="assets/css/untitled.css">
+</head>
+
+<body>
+    <div id="wrapper">
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand"> <a>PAMS System</a></li>
+                <li> <a href="clinics.html"><i class="fa fa-stethoscope" style="padding-left: 0;padding-right: 15px;/*margin: 0;*//*margin: 0;*/"></i>Clinics</a></li>
+                <li> <a href="managers.html"><i class="fa fa-user-secret" style="padding-left: 0;padding-right: 15px;/*margin: 0;*//*margin: 0;*/"></i>Managers</a></li>
+                <li> <a href="#"><i class="fa fa-child" style="padding-left: 0;padding-right: 15px;/*margin: 0;*//*margin: 0;*/"></i>Patients</a></li>
+                <li id="logout" style="position: absolute;bottom: 0;width: 100%;"> <a style="position: relative;width: 100%;" href="#"><i class="fa fa-sign-out" style="padding-left: 0;padding-right: 15px;/*margin: 0;*//*margin: 0;*/"></i>Log out</a></li>
+            </ul>
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand"> <a id="logo_img" style="cursor: pointer;">PAMS System</a></li>
+                <li> </li>
+                <li> <a href="dentists.html"><i class="fas fa-user-md" style="padding-left: 0;padding-right: 15px;/*margin: 0;*//*margin: 0;*/"></i>Dentists</a></li>
+                <li> <a href="receptionists.html"><i class="fa fa-eye" style="padding-left: 0;padding-right: 15px;/*margin: 0;*//*margin: 0;*/"></i>Receptionists</a><a href="#"><i class="fas fa-ad" style="padding-left: 0;padding-right: 15px;/*margin: 0;*//*margin: 0;*/"></i>Advertisements</a></li>
+                <li
+                    style="position: absolute;bottom: 0;width: 100%;"> <a style="position: relative;width: 100%;" href="clinicInfo.html"><i class="fa fa-edit" style="padding-left: 0;padding-right: 15px;/*margin: 0;*//*margin: 0;*/"></i>Edit Clinic Info</a><a id="clickInfoLogout" style="position: relative;width: 100%;cursor: pointer;"><i class="fa fa-sign-out" style="padding-left: 0;padding-right: 15px;/*margin: 0;*//*margin: 0;*/"></i>Log out</a></li>
+            </ul>
+        </div>
+        <div class="page-content-wrapper">
+            <div class="container-fluid"><a class="btn btn-link" role="button" id="menu-toggle" style="padding-left: 2px;" href="#menu-toggle"><i class="fa fa-bars" style="color: #0089aa;"></i></a>
+                <h6 id="manager-name" style="position: absolute;right: 10px;display: inline-block;top: 10px;font-family: Antic, sans-serif;font-size: 16px;">Bader Almaznumi</h6>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div>
+                            <h1>Clinic&nbsp;<small>Information</small></h1>
+                        </div>
+                    </div>
+                    <div class="col" style="background-color: #fefefe;">
+                        <div style="background-color: #ffffff;width: 100%;height: 50px;margin-top: 10px;padding: 10px;">
+                            <p style="line-height: 30px;display: inline-block;font-size: 17px;font-weight: 500;margin-left: 10px;">Clinic Name:&nbsp;</p>
+                            <p id="clinicNameText" style="display: inline-block;padding-left: 10px;">Paragraph</p>
+                        </div>
+                        <div style="background-color: #ffffff;width: 100%;height: 98px;margin-top: 10px;padding: 10px;">
+                            <p style="line-height: 30px;display: inline-block;font-size: 17px;font-weight: 500;margin-left: 10px;">Clinic Description:&nbsp;</p>
+                            <p id="clinicDescriptionText" style="/*display: inline-block;*/padding-left: 10px;"></p>
+                        </div>
+                        <div style="background-color: #ffffff;width: 100%;height: 98px;margin-top: 10px;padding: 10px;">
+                            <p style="line-height: 30px;display: inline-block;font-size: 17px;font-weight: 500;margin-left: 10px;">Clinic Location:&nbsp;</p>
+                            <p id="clinicLocationText" style="/*display: inline-block;*/padding-left: 10px;"></p>
+                        </div>
+                        <div style="background-color: #ffffff;width: 100%;height: 98px;margin-top: 10px;padding: 10px;">
+                            <p style="line-height: 30px;display: inline-block;font-size: 17px;font-weight: 500;margin-left: 10px;">Website</p><a style="display: inline-block;padding-left: 10px;" href="#" target="_blank">Link</a>
+                            <p id="clinicWebsiteText" style="/*display: inline-block;*/padding-left: 10px;"></p>
+                        </div>
+                        <div style="background-color: #ffffff;width: 100%;height: 98px;margin-top: 10px;padding: 10px;">
+                            <p style="line-height: 30px;display: inline-block;font-size: 17px;font-weight: 500;margin-left: 10px;">Email</p>
+                            <p id="clinicEmailText" style="/*display: inline-block;*/padding-left: 10px;"></p>
+                        </div>
+                        <div style="background-color: #ffffff;width: 100%;height: 50px;margin-top: 10px;padding: 10px;">
+                            <p style="line-height: 30px;display: inline-block;font-size: 17px;font-weight: 500;margin-left: 10px;">Status</p>
+                            <p id="clinicStatusText" style="display: inline-block;padding-left: 10px;"></p>
+                        </div>
+                        <div class="btn-group pull-right" role="group" style="padding-right: 0px;padding-bottom: 19px;padding-top: 10px;"><button class="btn btn-secondary" id="editClinicInfo" style="color: rgb(255,255,255);border: none;background-color: #ffba00;" type="button">Edit</button></div>
+                    </div>
+                    <div class="col" id="editPanel" style="display: none;">
+                        <form id="clinicInformationForm">
+                            <div class="form-group"><label id="clinicIDText" class="pull-right">Clinic ID #2</label></div>
+                            <div class="form-group" style="padding-top: 5px;"><label>Clinic Name:&nbsp;</label><input class="form-control" type="text" name="name" required="" minlength="5"></div>
+                            <div class="form-group" style="padding-top: 0px;"><label>Clinic Description:&nbsp;</label><textarea class="form-control" name="description" required="" minlength="5" rows="4"></textarea></div>
+                            <div class="form-group" style="padding-top: 0px;"><label>Clinic Location:&nbsp;</label><textarea class="form-control" name="location"></textarea></div>
+                            <div class="form-group" style="padding-top: 0px;"><label>Website:&nbsp;</label><input class="form-control" type="text" name="website" required="" inputmode="url"></div>
+                            <div class="form-group" style="padding-top: 0px;"><label>Email:&nbsp;</label><input class="form-control" type="text" name="email" required="" inputmode="email"></div>
+                            <div class="form-group" style="padding-top: 0px;"><label>Status:&nbsp;</label><select class="form-control" name="status"><option value="5" selected="">Open</option><option value="6">Temporarily Closed</option><option value="7">Closed</option></select></div>
+                        </form>
+                        <p id="clinicInfoResponseMessage" style="margin-bottom: 0;height: 37px;line-height: 37px;color: #ae1010;display: none;">Response Message</p>
+                        <div class="btn-group pull-right" role="group" style="padding-right: 0px;padding-bottom: 19px;"><button class="btn btn-secondary" id="saveClinicInfo" style="color: rgb(255,255,255);border: none;background-color: #ffba00;" type="button">Save</button><button class="btn btn-light" id="cancelClinicInfo" type="button">Cancel</button></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/bootstrap-datepicker.js"></script>
+    <script src="assets/js/custom.js"></script>
+    <script src="assets/js/jquery.animateNumber.min.js"></script>
+    <script src="assets/js/jquery.miranda.min.js"></script>
+    <script src="assets/js/Sidebar-Menu.js"></script>
+    <script src="assets/js/Table-with-search.js"></script>
+</body>
+
+</html>

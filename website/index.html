@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>AdminPanel1</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alegreya+Sans">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Antic">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="assets/css/Login-Form-Clean.css">
+    <link rel="stylesheet" href="assets/css/Navigation-Clean.css">
+    <link rel="stylesheet" href="assets/css/Registration-Form-with-Photo.css">
+    <link rel="stylesheet" href="assets/css/Sidebar-Menu-1.css">
+    <link rel="stylesheet" href="assets/css/Sidebar-Menu.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/Table-with-search.css">
+    <link rel="stylesheet" href="assets/css/untitled.css">
+</head>
+
+<body>
+    <div class="d-flex flex-column align-items-center" style="background-color: #0089aa;position: fixed;top: 0;left: 0;width: 20%;height: 100vh;">
+        <div class="d-md-flex flex-column align-items-center justify-content-md-center" style="height: 300px;"><i class="fa fa-user-circle" style="font-size: 73px;margin-top: 50px;color: rgb(255,255,255);text-align: center!important;"></i>
+            <h5 class="text-center" id="name-text" style="color: rgb(255,255,255);font-weight: normal;font-size: calc(100% + 10px);padding: 10px;margin-bottom: 0;padding-bottom: 0px;font-family: 'Alegreya Sans', sans-serif;">Bader Almazmumi</h5>
+            <h5 class="text-left" style="color: rgb(255,255,255);font-weight: normal;font-size: calc(100% + 5px);padding: 10px;padding-top: 0px;font-style: normal;font-family: 'Alegreya Sans', sans-serif;">Administrator</h5>
+        </div>
+        <div style="width: 100%;/*background-color: #ffffff;*/height: 100%;">
+            <div class="menu-item" style="width: 100%;/*height: 40px;*/">
+                <h1 style="color: #fff;font-size: 25px;line-height: 40px;padding-left: 20px;font-family: 'Alegreya Sans', sans-serif;"><i class="fa fa-home" style="margin-right: 10px;"></i>Home</h1>
+            </div>
+            <div class="menu-item" style="width: 100%;/*height: 40px;*/">
+                <h1 style="color: #fff;font-size: 25px;line-height: 40px;padding-left: 20px;font-family: 'Alegreya Sans', sans-serif;"><i class="fa fa-hospital-o" style="margin-right: 10px;"></i>Clinics</h1>
+            </div>
+            <div class="menu-item" style="width: 100%;/*height: 40px;*/">
+                <h1 style="color: #fff;font-size: 25px;line-height: 40px;padding-left: 20px;font-family: 'Alegreya Sans', sans-serif;"><i class="fa fa-group" style="margin-right: 10px;"></i>Managers</h1>
+            </div>
+            <div class="menu-item" style="width: 100%;height: 40px;"></div>
+        </div>
+    </div>
+    <div class="wrapper" style="left: 20%;width: 80%;position: absolute;">
+        <nav class="navbar navbar-light navbar-expand-md top-navigation" style="background-color: #efefef;">
+            <div class="container-fluid"><a class="navbar-brand" href="#">PAMS System</a><button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-2"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse d-lg-flex justify-content-lg-end"
+                    id="navcol-2">
+                    <ul class="nav navbar-nav">
+                        <li class="nav-item" role="presentation"><a class="nav-link text-left d-lg-flex justify-content-lg-end" href="#"><i class="fa fa-user" style="line-height: 25px;padding-right: 10px;"></i>Log out</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="statistic-section">
+            <h2 style="font-family: 'Alegreya Sans', sans-serif;padding-top: 15px;padding-left: 15px;">Statistic</h2>
+            <div class="card-group" style="padding: 10px;">
+                <div class="card">
+                    <div class="card-body" style="/*margin: 10px;*/">
+                        <h5 class="text-center card-title" style="margin-bottom: 5px;"><i class="fa fa-calendar-times-o" style="font-size: 30px;"></i></h5>
+                        <p class="text-center card-text" id="appointmentsText" style="font-size: 64px;margin-bottom: 0;">15</p>
+                        <h5 class="text-center" style="font-family: Antic, sans-serif;">Appoinrent</h5>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="text-center card-title" style="margin-bottom: 5px;"><i class="fa fa-hospital-o" style="font-size: 30px;"></i></h5>
+                        <p class="text-center card-text" id="clinicsText" style="font-size: 64px;margin-bottom: 0px;">15</p>
+                        <h5 class="text-center" style="font-family: Antic, sans-serif;">Clnics</h5>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="text-center card-title" style="margin-bottom: 5px;"><i class="fa fa-stethoscope" style="font-size: 30px;"></i></h5>
+                        <p class="text-center card-text" id="dentistsText" style="font-size: 64px;margin-bottom: 0px;">15</p>
+                        <h5 class="text-center" style="font-family: Antic, sans-serif;">Dentists</h5>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="text-center card-title" style="margin-bottom: 5px;"><i class="fa fa-user" style="font-size: 30px;"></i></h5>
+                        <p class="text-center card-text" id="usersText" style="font-size: 64px;margin-bottom: 0px;">15</p>
+                        <h5 class="text-center" style="font-family: Antic, sans-serif;">Patients</h5>
+                    </div>
+                </div>
+            </div>
+            <h2 style="font-family: 'Alegreya Sans', sans-serif;padding-top: 15px;padding-left: 15px;">Actions</h2>
+            <div class="container">
+                <div class="card-group viewActions">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">View All Managers</h4>
+                            <p class="card-text">From here you can view all active Managers.<br></p>
+                            <div><a class="btn btn-success" role="button" href="#viewManagersModal" id="viewManagersButton" data-toggle="modal" style="background-color: #FFBA00;border: none;">View</a><div role="dialog" tabindex="-1" class="modal fade" id="viewManagersModal" style="opacity: 1;">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4>View Clinics</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button></div>
+            <div class="modal-body">
+                <table class="table" id="clinics-table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Manager Name</th>
+      <th scope="col">Email</th>
+      <th scope="col">Registeration Date</th>
+        <th scope="col">Gender</th>
+         <th scope="col">Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+  </tbody>
+</table>
+            </div>
+            <div class="modal-footer"><button class="btn btn-light" type="button" data-dismiss="modal">Close</button></div>
+        </div>
+    </div>
+</div></div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">View All Clinics</h4>
+                            <p class="card-text">From here you can view all clinics available at this time.<br></p>
+                            <div><a class="btn btn-success" role="button" href="#viewClinicsModal" id="viewClinicsButton" data-toggle="modal" style="background-color: #FFBA00;border: none;">View</a><div role="dialog" tabindex="-1" class="modal fade" id="viewClinicsModal" style="opacity: 1;">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4>View Clinics</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button></div>
+            <div class="modal-body">
+                <table class="table" id="clinics-table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Clinic Name</th>
+      <th scope="col">Location</th>
+      <th scope="col">Website</th>
+        <th scope="col">Email</th>
+         <th scope="col">Rating</th>
+        <th scope="col">Clinic Manager</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+  </tbody>
+</table>
+            </div>
+            <div class="modal-footer"><button class="btn btn-light" type="button" data-dismiss="modal">Close</button></div>
+        </div>
+    </div>
+</div></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-group addActions">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">Add Manager</h4>
+                            <p class="card-text">From here you can add an active Manager<br></p>
+                            <div><a class="btn btn-success" role="button" href="#addManagerModal" data-toggle="modal" style="background-color: #FFBA00;border: none;">ADD</a><div role="dialog" tabindex="-1" class="modal fade" id="addManagerModal" style="opacity: 1;">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4>Add Manager</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button></div>
+            <div class="modal-body">
+<form id="addManagerForm">
+    <div class="manager_name">
+        <div class="form-group" style="width: 100%;    padding-right: 5px;"><label >First Name:</label><input type="text" class="form-control" name="fname"/></div>
+        <div class="form-group" style="width: 100%;    padding-left: 5px;"><label >Last Name:</label><input name="lname" type="text" class="form-control" /></div>
+    </div>
+    <div class="form-group"><label >Username:</label><input name="username" type="text" class="form-control" /></div>
+    <div class="form-group"><label >Email:</label><input name="email" type="text" class="form-control" /></div>
+    <div class="form-group"><label >Password:</label><input name="password" type="text" class="form-control" /></div>
+    
+    <div class="form-group"><label >Gender:</label><select id="newMangerGender" name="gender" class="form-control"><option name="gender" value="MALE" selected>MALE</option><option value="FEMALE">FEMALE</option></select></div>
+    
+    <div class="form-group"><label id="addMangerResponse">Response:</label></div>
+        
+</form>
+            </div>
+            <div class="modal-footer">
+                <button id="addManagerButton" class="btn btn-light" type="button" >ADD</button>
+                <button class="btn btn-light" type="button" data-dismiss="modal">Close</button></div>
+        </div>
+    </div>
+</div></div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">Add New Clinic</h4>
+                            <p class="card-text">From here you can add active hospitals<br></p>
+                            <div><a class="btn btn-success" role="button" href="#addClinicModal" id="addNewClinicButton" data-toggle="modal" style="background-color: #FFBA00;border: none;">ADD</a><div role="dialog" tabindex="-1" class="modal fade" id="addClinicModal" style="opacity: 1;">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4>View Clinics</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button></div>
+            <div class="modal-body">
+                <form id="addClinicForm">
+    <div class="manager_name">
+        <div class="form-group" style="width: 100%;    padding-right: 5px;"><label>Clinic Name:</label><input type="text" name="name" class="form-control" /></div>
+        <div class="form-group" style="width: 100%;    padding-left: 5px;"><label>Website:</label><input type="text" name="website" class="form-control" /></div>
+    </div>
+    <div class="form-group"><label>Email:</label><input type="text" name="email" class="form-control" /></div>
+    <div class="form-group"><label>Location:</label><input type="text" name="location" class="form-control" /></div>
+    <div class="form-group"><label>Clinic Profile:</label><input type="text" name="profile" class="form-control" /></div>
+    <div class="form-group"><label>Manager:</label>
+        <select id="manager-list" name="clinicman_ID" class="form-control">
+          
+          
+
+        </select>
+        <label>Manager:</label>
+                    <button style="margin-top:10px;" class="btn btn-light" type="button" data-dismiss="modal" class="btn btn-success" role="button" href="#addManagerModal" data-toggle="modal" 
+                    >Add New Manager</button></div>
+                    <div class="form-group"><label id = "addClinicResponse">Manager:</label></div>
+</form>
+            </div>
+            <div class="modal-footer">
+                <button id="addClinicButton" class="btn btn-light" type="button" >ADD</button>
+                <button class="btn btn-light" type="button" data-dismiss="modal">Close</button></div>
+        </div>
+    </div>
+</div></div>
+                        </div>
+                    </div>
+                </div></div>
+        </div>
+    </div><div>
+    <script>
+    
+            // if(sessionStorage.getItem('username') == null){
+            //     window.location.href= 'login.html';
+            // }
+
+
+            
+       
+    </script>
+</div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/custom.js"></script>
+    <script src="assets/js/jquery.animateNumber.min.js"></script>
+    <script src="assets/js/jquery.miranda.min.js"></script>
+    <script src="assets/js/Sidebar-Menu.js"></script>
+    <script src="assets/js/Table-with-search.js"></script>
+</body>
+
+</html>

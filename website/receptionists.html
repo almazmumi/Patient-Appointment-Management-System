@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>AdminPanel1</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alegreya+Sans">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Antic">
+    <link rel="stylesheet" href="assets/css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="assets/css/Login-Form-Clean.css">
+    <link rel="stylesheet" href="assets/css/Navigation-Clean.css">
+    <link rel="stylesheet" href="assets/css/Registration-Form-with-Photo.css">
+    <link rel="stylesheet" href="assets/css/Sidebar-Menu-1.css">
+    <link rel="stylesheet" href="assets/css/Sidebar-Menu.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/Table-with-search.css">
+    <link rel="stylesheet" href="assets/css/untitled.css">
+</head>
+
+<body>
+    <div id="wrapper">
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand"> <a>PAMS System</a></li>
+                <li> <a href="clinics.html"><i class="fa fa-stethoscope" style="padding-left: 0;padding-right: 15px;/*margin: 0;*//*margin: 0;*/"></i>Clinics</a></li>
+                <li> <a href="managers.html"><i class="fa fa-user-secret" style="padding-left: 0;padding-right: 15px;/*margin: 0;*//*margin: 0;*/"></i>Managers</a></li>
+                <li> <a href="#"><i class="fa fa-child" style="padding-left: 0;padding-right: 15px;/*margin: 0;*//*margin: 0;*/"></i>Patients</a></li>
+                <li id="logout" style="position: absolute;bottom: 0;width: 100%;"> <a style="position: relative;width: 100%;" href="#"><i class="fa fa-sign-out" style="padding-left: 0;padding-right: 15px;/*margin: 0;*//*margin: 0;*/"></i>Log out</a></li>
+            </ul>
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand"> <a>PAMS System</a></li>
+                <li> </li>
+                <li> <a href="dentists.html"><i class="fas fa-user-md" style="padding-left: 0;padding-right: 15px;/*margin: 0;*//*margin: 0;*/"></i>Dentists</a></li>
+                <li> <a href="receptionists.html"><i class="fa fa-eye" style="padding-left: 0;padding-right: 15px;/*margin: 0;*//*margin: 0;*/"></i>Receptionists</a><a href="#"><i class="fas fa-ad" style="padding-left: 0;padding-right: 15px;/*margin: 0;*//*margin: 0;*/"></i>Advertisements</a></li>
+                <li
+                    style="position: absolute;bottom: 0;width: 100%;"> <a style="position: relative;width: 100%;" href="clinicInfo.html"><i class="fa fa-edit" style="padding-left: 0;padding-right: 15px;/*margin: 0;*//*margin: 0;*/"></i>Edit Clinic Info</a><a id="receptionistLogout" style="position: relative;width: 100%;cursor: pointer;"><i class="fa fa-sign-out" style="padding-left: 0;padding-right: 15px;/*margin: 0;*//*margin: 0;*/"></i>Log out</a></li>
+            </ul>
+        </div>
+        <div class="page-content-wrapper">
+            <div class="container-fluid"><a class="btn btn-link" role="button" id="menu-toggle" style="padding-left: 2px;" href="#menu-toggle"><i class="fa fa-bars" style="color: #0089aa;"></i></a>
+                <h6 id="manager-name" style="position: absolute;right: 10px;display: inline-block;top: 10px;font-family: Antic, sans-serif;font-size: 16px;">Bader Almaznumi</h6>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div>
+                            <h1>Receptionists&nbsp;<small>Information</small></h1>
+                        </div>
+                    </div>
+                    <div class="col"><div class="form-group pull-right">
+    <input type="text" class="search form-control" placeholder="Search">
+</div>
+<span class="counter pull-right"></span>
+<table  class="table table-hover results">
+  <thead>
+    <tr>
+        <th>#</th>
+        <th>Receptionist Name</th>
+        <th>Username</th>
+        <th>Password</th>
+        <th>Email</th>
+        <th>Gender</th>
+        <th>Status</th>
+        <th>Registration Date</th>
+        <th>Action</th>
+        
+    </tr>
+    <tr class="warning no-result">
+      <td colspan="8"><i class="fa fa-warning"></i> No result</td>
+    </tr>
+  </thead>
+  <tbody id="managers-table">
+    
+  </tbody>
+</table>
+                        <h5 class="text-center" id="updateClinicResponseMessage" style="font-family: 'Alegreya Sans', sans-serif;color: rgb(0,0,0);display: none;"><i class="fa fa-thumbs-up"></i>&nbsp; &nbsp; Everything is going very WELL!</h5>
+                    </div>
+                    <div class="col-md-12" id="editManagerForm" style="display: none;height: 100vh;">
+                        <div>
+                            <h1 style="margin-bottom: 16px;margin-top: 73px;">Edit&nbsp;<small>Receptionist</small></h1>
+                        </div>
+                        <form>
+                            <div style="justify-content: space-between;display: flex;">
+                                <div class="form-group" style="width: 100%;padding-right: 5px;display: inline-block;"><label style="/*margin-bottom: 0;*/">First Name:</label><input class="form-control" type="text" name="fname" required="" minlength="4"></div>
+                                <div class="form-group" style="display: inline-block;width: 100%;padding-left: 5px;"><label style="/*margin-bottom: 0;*/">Last Name:</label><input class="form-control" type="text" name="lname" required="" minlength="4"></div>
+                            </div>
+                            <div class="form-group"><label style="/*margin-bottom: 0;*/">Username:</label><input class="form-control" type="text" name="username"></div>
+                            <div class="form-group"><label style="/*margin-bottom: 0;*/">Password:</label><input class="form-control" type="text" name="password"></div>
+                            <div class="form-group"><label style="/*margin-bottom: 0;*/">Email:</label><input class="form-control" type="text" name="email" inputmode="email"></div>
+                            <div class="form-group"><label style="/*margin-bottom: 0;*/">Gender:</label><select class="form-control" id="gender_select" name="gender"><option value="MALE" selected="">MALE</option><option value="FEMALE">FEMALE</option></select></div>
+                            <div class="form-group"><label style="/*margin-bottom: 0;*/">Status:</label><select class="form-control" id="status_select" name="status"><option value="1" selected="">Active</option><option value="2">Suspended </option><option value="3">On Vacation</option></select></div>
+                            <div
+                                class="btn-group pull-right" role="group" style="margin-top: 0px;margin-bottom: 20px;"><button class="btn btn-light closeBTN" style="margin-right: 15px;" type="button">Cancel</button><button class="btn btn-primary updateBTN" style="color: #ffffff;background-color: #ffba00;border: none;" type="button">UPDATE</button></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/bootstrap-datepicker.js"></script>
+    <script src="assets/js/custom.js"></script>
+    <script src="assets/js/jquery.animateNumber.min.js"></script>
+    <script src="assets/js/jquery.miranda.min.js"></script>
+    <script src="assets/js/Sidebar-Menu.js"></script>
+    <script src="assets/js/Table-with-search.js"></script>
+</body>
+
+</html>
